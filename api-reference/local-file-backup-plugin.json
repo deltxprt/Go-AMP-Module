@@ -1,0 +1,115 @@
+{
+  "UploadToS3": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "RunningTask",
+    "IsComplexType": false
+  },
+  "DownloadFromS3": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "RunningTask",
+    "IsComplexType": false
+  },
+  "DeleteFromS3": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "Task<ActionResult>",
+    "IsComplexType": false
+  },
+  "GetBackups": {
+    "Parameters": [],
+    "ReturnTypeName": "IEnumerable<BackupManifest>",
+    "IsComplexType": false
+  },
+  "RestoreBackup": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "DeleteExistingData",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": true
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "DeleteLocalBackup": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "Void",
+    "IsComplexType": false
+  },
+  "SetBackupSticky": {
+    "Parameters": [
+      {
+        "Name": "BackupId",
+        "TypeName": "Guid",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Sticky",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "Void",
+    "IsComplexType": false
+  },
+  "TakeBackup": {
+    "Parameters": [
+      {
+        "Name": "Title",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Description",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Sticky",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  }
+}

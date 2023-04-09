@@ -1,0 +1,7 @@
+{
+  "TestSMTPSettings": {
+    "Parameters": [],
+    "ReturnTypeName": "Task<ActionResult>",
+    "IsComplexType": false
+  }
+}

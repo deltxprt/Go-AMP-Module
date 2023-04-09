@@ -1,0 +1,287 @@
+{
+  "Dummy": {
+    "Parameters": [],
+    "ReturnTypeName": "Void",
+    "IsComplexType": false
+  },
+  "CalculateFileMD5Sum": {
+    "Parameters": [
+      {
+        "Name": "FilePath",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult<String>",
+    "IsComplexType": false
+  },
+  "ChangeExclusion": {
+    "Parameters": [
+      {
+        "Name": "ModifyPath",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "AsDirectory",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Exclude",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "CreateArchive": {
+    "Parameters": [
+      {
+        "Name": "PathToArchive",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "ExtractArchive": {
+    "Parameters": [
+      {
+        "Name": "ArchivePath",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "DestinationPath",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": true
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "GetDirectoryListing": {
+    "Parameters": [
+      {
+        "Name": "Dir",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "IEnumerable<JObject>",
+    "IsComplexType": true
+  },
+  "GetFileChunk": {
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Position",
+        "TypeName": "Int64",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Length",
+        "TypeName": "Int32",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "FileChunkData",
+    "IsComplexType": false
+  },
+  "AppendFileChunk": {
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Data",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Delete",
+        "TypeName": "Boolean",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "Void",
+    "IsComplexType": false
+  },
+  "WriteFileChunk": {
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Position",
+        "TypeName": "Int64",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "Data",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "Void",
+    "IsComplexType": false
+  },
+  "DownloadFileFromURL": {
+    "Parameters": [
+      {
+        "Name": "Source",
+        "TypeName": "Uri",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "TargetDirectory",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "RenameFile": {
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "NewFilename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "CopyFile": {
+    "Parameters": [
+      {
+        "Name": "Origin",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      },
+      {
+        "Name": "TargetDirectory",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "TrashFile": {
+    "Description": "Moves a file to trash, files must be trashed before they can be deleted.",
+    "Returns": "",
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "TrashDirectory": {
+    "Description": "Moves a directory to trash, files must be trashed before they can be deleted.",
+    "Returns": "",
+    "Parameters": [
+      {
+        "Name": "DirectoryName",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "EmptyTrash": {
+    "Description": "Empties a trash bin",
+    "Returns": "",
+    "Parameters": [
+      {
+        "Name": "TrashDirectoryName",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "CreateDirectory": {
+    "Description": "Creates a new directory. The parent directory must already exist.",
+    "Returns": "",
+    "Parameters": [
+      {
+        "Name": "NewPath",
+        "TypeName": "String",
+        "Description": "",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  },
+  "RenameDirectory": {
+    "Description": "Renames a directory",
+    "Returns": "",
+    "Parameters": [
+      {
+        "Name": "oldDirectory",
+        "TypeName": "String",
+        "Description": "The full path to the old directory",
+        "Optional": false
+      },
+      {
+        "Name": "NewDirectoryName",
+        "TypeName": "String",
+        "Description": "The name component of the new directory (not the full path)",
+        "Optional": false
+      }
+    ],
+    "ReturnTypeName": "ActionResult",
+    "IsComplexType": false
+  }
+}
